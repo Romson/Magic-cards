@@ -39,7 +39,7 @@ app.post('/secret', (req, res) => {
                 }
 
             });
-            db.close();
+            client.close();
         }
     });
 });
@@ -74,7 +74,7 @@ app.get('/:param*', (req, res) => {
                         res.sendStatus(404);
                     }
 
-                    db.close();
+                    client.close();
                 })
             }
         }
